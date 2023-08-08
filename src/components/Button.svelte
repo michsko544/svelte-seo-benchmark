@@ -1,0 +1,43 @@
+<script lang="ts">
+  import { createEventDispatcher } from 'svelte';
+  import type { HTMLButtonAttributes } from 'svelte/elements';
+
+  type $$Props = HTMLButtonAttributes & {
+    className?: string;
+    onClick?: ()=>void;
+  };
+
+  export let className = '';
+
+  const dispatch = createEventDispatcher();
+
+  function handleClick() {
+		dispatch('click');
+	}
+</script>
+
+<button
+  {...$$restProps}
+  class="{`button ${className}`}"
+  on:click={handleClick}
+>
+  <slot/>
+</button>
+
+<style>
+.button {
+  background-color: var(--color-green);
+  border-radius: 32px;
+  padding: 12px 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  width: fit-content;
+  color: var(--color-font);
+  box-shadow: 1px 4px 4px 0px rgba(70, 168, 36, 0.45);
+  font-family: var(--font-title);
+  font-size: 20px;
+  line-height: 1.25;
+}
+</style>

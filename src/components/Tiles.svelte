@@ -1,0 +1,46 @@
+<script lang="ts">
+  import Tile from './Tile.svelte';
+</script>
+
+<section class="tiles">
+  <div class="content-wrapper">
+    <div class="tiles__inner">
+      <h2 class="tiles__title">Podsekcja</h2>
+      <div class="tiles__wrapper">
+        <Tile title="Przykładowy tekst" icon="add-user" />
+        <Tile title="Przykładowy tekst" icon="money" secondary />
+        <Tile title="Przykładowy tekst" icon="happy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.tiles {
+  padding: 100px 64px;
+  width: 100%;
+}
+
+.tiles__inner {
+  width: 100%;
+}
+
+.tiles__title {
+  margin: 0 auto 64px;
+  font-size: 64px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.tiles__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1296px;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+</style>

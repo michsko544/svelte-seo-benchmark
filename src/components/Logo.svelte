@@ -1,0 +1,28 @@
+<a href="/" class="logo__container">
+  <div class="logo__circle"></div>
+  <div class="logo__text">LOGO</div>
+</a>
+
+<style>
+.logo__container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo__circle {
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1;
+  background-color: var(--color-green);
+  border-radius: 50%;
+}
+
+.logo__text {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+}
+</style>
