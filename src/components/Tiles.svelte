@@ -43,4 +43,18 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1000px) {
+  .tiles {
+    padding: 64px 16px;
+  }
+
+  .tiles__title {
+    font-size: 32px;
+  }
+
+  .tiles__wrapper {
+    gap: 16px;
+  }
+}
+
 </style>

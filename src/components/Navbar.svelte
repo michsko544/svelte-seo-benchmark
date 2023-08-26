@@ -96,4 +96,15 @@
   aspect-ratio: 1;
   vertical-align: center;
 }
+
+@media (max-width: 1000px) {
+  .navbar__inner {
+    padding: 0 16px;
+  }
+
+  .linklist {
+    display: none;
+  }
+}
+
 </style>

@@ -44,6 +44,7 @@ import Logo from "./Logo.svelte";
         <a
           href="https://github.com/michsko544/svelte-seo-benchmark"
           target="_blank"
+          class="footer__social-link"
         >
           <svg
             width="32"
@@ -104,11 +105,30 @@ import Logo from "./Logo.svelte";
   align-items: flex-end;
 }
 
+.footer__social-link {
+  line-height: 0;
+}
+
 .footer__copyright {
   display: flex;
   gap: 16px;
   align-items: center;
   font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .footer__inner {
+    padding: 48px 16px 16px;
+  }
+
+  .footer__content {
+    gap: 48px;
+    flex-direction: column;
+  }
+
+  .footer__end {
+    margin-top: 64px;
+  }
 }
 
 </style>

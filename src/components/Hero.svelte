@@ -1,5 +1,6 @@
 <script lang="ts">
   import heroImage from "@/assets/hero.png";
+  import heroImageMobile from "@/assets/heroMobile.png";
 
   import Button from "./Button.svelte";
   import Dots from "./Dots.svelte";
@@ -13,7 +14,16 @@
 </script>
 
 <section class="hero">
-  <img src={heroImage} alt="Zdjęcie główne" class="hero__image" />
+  <img
+    src={heroImage}
+    alt="Zdjęcie główne"
+    class="hero__image hero__image--desktop"
+  />
+  <img
+    src={heroImageMobile}
+    alt="Zdjęcie główne"
+    class="hero__image hero__image--mobile"
+  />
   <div class="hero__content">
     <div class="hero__inner">
       <div class="content-wrapper">
@@ -57,6 +67,10 @@
   object-fit: cover;
 }
 
+.hero__image--mobile {
+  display: none;
+}
+
 .hero__content {
   position: absolute;
   top: 50%;
@@ -83,6 +97,29 @@
 .hero__text {
   font-size: 16px;
   color: #383838;
+}
+
+@media (max-width: 1000px) {
+  .hero__inner {
+    padding: 0 16px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__image {
+    height: 80vh;
+    object-position: left center;
+  }
+
+  .hero__image--mobile {
+    display: block;
+  }
+
+  .hero__image--desktop {
+    display: none;
+  }
 }
 
 </style>
